@@ -2,15 +2,15 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<title>Manette NES</title>
+<title>Manette NES en HTML/CSS (taille téléphone)</title>
 <style>
   .nes-controller {
     position: relative;
-    width: 200px;
-    height: 100px;
+    width: 100px; /* Taille d'un téléphone */
+    height: 50px; /* Taille d'un téléphone */
     background-color: #000;
-    border-radius: 10px;
-    padding: 20px;
+    border-radius: 5px;
+    padding: 10px;
     box-sizing: border-box;
   }
 
@@ -20,10 +20,10 @@
   }
 
   .d-pad {
-    left: 20px;
-    top: 30px;
-    width: 20px;
-    height: 20px;
+    left: 10px;
+    top: 15px;
+    width: 10px;
+    height: 10px;
   }
 
   .d-pad::before, .d-pad::after {
@@ -33,44 +33,44 @@
   }
 
   .d-pad::before {
-    left: -10px;
-    top: 10px;
-    width: 40px;
-    height: 2px;
+    left: -5px;
+    top: 5px;
+    width: 20px;
+    height: 1px;
   }
 
   .d-pad::after {
-    left: 10px;
-    top: -10px;
-    width: 2px;
-    height: 40px;
+    left: 5px;
+    top: -5px;
+    width: 1px;
+    height: 20px;
   }
 
   .start-select {
-    width: 40px;
-    height: 5px;
-    bottom: 20px;
+    width: 20px;
+    height: 2px;
+    bottom: 10px;
     left: 50%;
     transform: translateX(-50%);
   }
 
   .start-select:not(:last-child) {
-    margin-right: 10px;
+    margin-right: 5px;
   }
 
   .button-a, .button-b {
-    right: 20px;
-    width: 15px;
-    height: 15px;
+    right: 10px;
+    width: 7px;
+    height: 7px;
     border-radius: 50%;
   }
 
   .button-a {
-    top: 30px;
+    top: 15px;
   }
 
   .button-b {
-    top: 50px;
+    top: 25px;
   }
 </style>
 </head>
