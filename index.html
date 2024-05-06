@@ -11,13 +11,15 @@
       justify-content: center;
       align-items: center;
       height: 100vh;
+      margin: 0; /* Ajout de la marge zéro pour éviter les marges par défaut */
     }
 
     .container {
       display: grid;
       grid-template-columns: auto auto auto; /* Trois colonnes */
       gap: 0px; /* Espacement entre les éléments */
-      width: 300px; /* Ajustez la largeur selon vos besoins */
+      width: 100%; /* Prend toute la largeur de l'écran */
+      max-width: 600px; /* Limite la largeur maximale */
       background-color: #ccc;
       border: 5px solid #000;
       padding: 10px;
@@ -83,6 +85,13 @@
       margin-bottom: 10px; /* Ajout d'un espace entre les boutons */
       border: 2px solid #000;
       cursor: pointer;
+    }
+
+    /* Média de requête pour les appareils mobiles */
+    @media (max-width: 600px) {
+      .container {
+        grid-template-columns: auto; /* Une seule colonne sur les appareils mobiles */
+      }
     }
   </style>
 </head>
