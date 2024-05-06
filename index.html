@@ -7,9 +7,9 @@
   <style>
 .container {
     display: flex;
+    align-items: center;
     justify-content: space-between;
-    width: 100%;
-    height: max-content;
+    width: 400px; /* ajustez la largeur selon vos besoins */
     background-color: #f0f0f0;
     padding: 10px;
 }
@@ -22,35 +22,18 @@
 .buttons {
     display: flex;
     align-items: center;
-    padding: 10px;
 }
 
 .arrow {
-    content: '';
-    position: relative;
-    top: -3px;
-    left: -5px;
+    width: 20px;
+    height: 20px;
     border: solid transparent;
-    border-width: 0 10px 10px 10px;
-    border-color: transparent transparent #000 transparent;
+    border-width: 5px 5px 0 5px;
+    border-color: transparent transparent transparent transparent;
+    position: relative;
 }
 
 
-.arrow-up {
-    transform: rotate(0deg);
-}
-
-.arrow-down {
-    transform: rotate(180deg);
-}
-
-.arrow-right {
-    transform: rotate(90deg);
-}
-
-.arrow-left {
-    transform: rotate(-90deg);
-}
 
 .button {
     width: 30px;
@@ -64,10 +47,7 @@
 <body>
     <div class="container">
         <div class="arrows">
-            <span class="arrow arrow-up"></span>
-            <span class="arrow arrow-right"></span>
-            <span class="arrow arrow-left"></span>
-            <span class="arrow arrow-down"></span>
+            <img src=""
         </div>
         <div class="buttons">
             <button class="button">A</button>
