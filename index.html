@@ -54,12 +54,9 @@
       width: 50px;
       height: 20px;
       background-color: #d3d3d3;
-      border: 2px solid #000;
       border-radius: 5px;
-      cursor: pointer;
       font-weight: bold;
       font-size: 12px;
-      color: #000;
     }
 
     .gray-box {
@@ -71,28 +68,20 @@
     }
 
     .buttons {
-      grid-column: 3; /* Troisième colonne */
-      justify-self: center; /* Centrer horizontalement */
-      align-self: center;
-      border: 2px solid #000; /* Ajout d'une bordure noire de 2px */
-    }
+    grid-column: 3; /* Troisième colonne */
+    justify-self: center; /* Centrer horizontalement */
+    align-self:last baseline;
 
-    .button {
-      width: 30px;
-      height: 30px;
-      border-radius: 50%;
-      background-color: #ff0000;
-      margin-bottom: 10px; /* Ajout d'un espace entre les boutons */
-      border: 2px solid #000;
-      cursor: pointer;
-    }
+}
 
-    /* Média de requête pour les appareils mobiles */
-    @media (max-width: 600px) {
-      .container {
-        grid-template-columns: auto; /* Une seule colonne sur les appareils mobiles */
-      }
-    }
+.button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: red;
+    margin-bottom: 10px; /* Ajout d'un espace entre les boutons */
+}
+
   </style>
 </head>
 <body>
