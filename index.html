@@ -1,136 +1,86 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NES Controller</title>
   <style>
-    body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 400px; /* ajustez la largeur selon vos besoins */
+    background-color: #f0f0f0;
+    padding: 10px;
 }
 
-.nes-controller {
-  width: 250px;
-  height: 400px;
-  background-color: #b8b8b8;
-  border: 5px solid #727272;
-  border-radius: 15px;
-  display: flex;
-  flex-direction: column;
+.arrows {
+    display: flex;
+    flex-direction: column;
 }
 
-.nes-top {
-  flex: 1;
-  background-color: #d8d8d8;
+.buttons {
+    display: flex;
+    align-items: center;
 }
 
-.nes-middle {
-  flex: 2;
-  display: flex;
-  justify-content: space-between;
-  padding: 10px;
+.arrow {
+    width: 20px;
+    height: 20px;
+    border: solid transparent;
+    border-width: 5px 5px 0 5px;
+    border-color: transparent transparent transparent transparent;
+    position: relative;
 }
 
-.nes-bottom {
-  flex: 1;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 20px;
+.arrow::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -5px;
+    border: solid transparent;
+    border-width: 0 10px 10px 10px;
+    border-color: transparent transparent #000 transparent;
 }
 
-.nes-button {
-  width: 50px;
-  height: 50px;
-  background-color: #8a8a8a;
-  border-radius: 50%;
+.arrow-up::before {
+    top: -10px;
 }
 
-.a {
-  background-color: #d8d8d8;
+.arrow-down {
+    transform: rotate(180deg);
 }
 
-.b {
-  background-color: #d8d8d8;
+.arrow-right {
+    transform: rotate(90deg);
 }
 
-.select {
-  width: 20px;
-  height: 20px;
-  background-color: #d8d8d8;
+.arrow-left {
+    transform: rotate(-90deg);
 }
 
-.start {
-  width: 20px;
-  height: 20px;
-  background-color: #d8d8d8;
+.button {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: red;
+    margin-left: 10px;
 }
-
-.nes-dpad {
-  width: 50px;
-  height: 50px;
-  display: grid;
-  grid-template-areas:
-    "up"
-    "left right"
-    "down";
-}
-
-.nes-dpad-up {
-  grid-area: up;
-  width: 0;
-  height: 0;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  border-bottom: 15px solid #d8d8d8;
-}
-
-.nes-dpad-left {
-  grid-area: left;
-  width: 15px;
-  height: 100%;
-  background-color: #d8d8d8;
-}
-
-.nes-dpad-down {
-  grid-area: down;
-  width: 0;
-  height: 0;
-  border-left: 15px solid transparent;
-  border-right: 15px solid transparent;
-  border-top: 15px solid #d8d8d8;
-}
-
-.nes-dpad-right {
-  grid-area: right;
-  width: 15px;
-  height: 100%;
-  background-color: #d8d8d8;
-}
-
   </style>
 </head>
 <body>
-  <div class="nes-controller">
-    <div class="nes-top"></div>
-    <div class="nes-middle">
-      <div class="nes-button a"></div>
-      <div class="nes-button b"></div>
+    <div class="container">
+        <div class="arrows">
+            <span class="arrow arrow-up"></span>
+            <span class="arrow arrow-down"></span>
+            <span class="arrow arrow-right"></span>
+            <span class="arrow arrow-left"></span>
+        </div>
+        <div class="buttons">
+            <button class="button">A</button>
+            <button class="button">B</button>
+        </div>
     </div>
-    <div class="nes-bottom">
-      <div class="nes-button select"></div>
-      <div class="nes-button start"></div>
-      <div class="nes-dpad">
-        <div class="nes-dpad-up"></div>
-        <div class="nes-dpad-left"></div>
-        <div class="nes-dpad-down"></div>
-        <div class="nes-dpad-right"></div>
-      </div>
-    </div>
-  </div>
+    
 </body>
 </html>
