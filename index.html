@@ -5,55 +5,79 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NES Controller</title>
   <style>
+
 .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 400px; /* ajustez la largeur selon vos besoins */
+    display: grid;
+    grid-template-columns: auto auto auto; /* Trois colonnes */
+    gap: 10px; /* Espacement entre les éléments */
+    width: 600px; /* Ajustez la largeur selon vos besoins */
     background-color: #f0f0f0;
-    padding: 10px;
+}
+
+img {
+    width: 100px;
+    padding: 0;
+    margin: 0;
+    align-self: center;
 }
 
 .arrows {
-    display: flex;
-    flex-direction: column;
+    grid-column: 1; /* Première colonne */
+    justify-self: center; /* Centrer horizontalement */
+    align-self: center;
+}
+
+.start-select {
+    grid-column: 2; /* Deuxième colonne */
+    padding: auto;
+}
+
+.S{
+    justify-self: center; /* Centrer horizontalement */
+    align-self: center;
+    border: 2px solid black; /* Ajout d'une bordure noire de 2px */
+}
+
+.gray-box {
+    background-color: gray;
+    height: 10px; /* Assurez-vous que la hauteur correspond à celle des boutons */
+    width: 100%; /* La case grise s'étend sur toute la largeur de la colonne */
+    row-gap: 10px;
+    border-radius: 20%;
 }
 
 .buttons {
-    display: flex;
-    align-items: center;
+    grid-column: 3; /* Troisième colonne */
+    justify-self: center; /* Centrer horizontalement */
+    align-self: center;
 }
-
-.arrow {
-    width: 20px;
-    height: 20px;
-    border: solid transparent;
-    border-width: 5px 5px 0 5px;
-    border-color: transparent transparent transparent transparent;
-    position: relative;
-}
-
-
 
 .button {
     width: 30px;
     height: 30px;
     border-radius: 50%;
     background-color: red;
-    margin-left: 10px;
+    margin-bottom: 10px; /* Ajout d'un espace entre les boutons */
 }
   </style>
 </head>
 <body>
     <div class="container">
         <div class="arrows">
-            <img src=""
+            <img src="D-pad2.png">
+        </div>
+        <div class="start-select">
+            <div class="gray-box"></div> 
+            <div class="gray-box"></div> 
+            <div class="gray-box"></div>
+            <button class="S">Start</button>
+            <button class="S">Select</button>
+            <div class="gray-box"></div>
         </div>
         <div class="buttons">
             <button class="button">A</button>
             <button class="button">B</button>
         </div>
     </div>
-    
 </body>
 </html>
