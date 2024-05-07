@@ -7,17 +7,20 @@
   <style>
     body{
         background-color: brown;
+        margin: 1%;
     }
 
     .container-fluid{
         background-color: aliceblue;
+        height: 100vh;
         padding: 1%;
     }
 
     .container{
         background-color: black;
         display: grid;
-        grid-template-columns: auto auto auto; 
+        height: 100vh;
+        grid-template-columns: auto auto auto auto auto; 
         gap: 0px; 
     }
 
@@ -45,7 +48,7 @@
     }
 
     .Select {
-      grid-column: 2; /* Deuxième colonne */
+      grid-column: 3; /* Deuxième colonne */
       display: grid;
       grid-template-rows: auto auto auto auto auto; 
       align-items: center;
@@ -64,7 +67,7 @@
     }
 
     .buttons {
-        grid-column: 3; /* Troisième colonne */
+        grid-column: 5; /* Troisième colonne */
         display: flex;
         flex-direction: column;
         align-items: center;
