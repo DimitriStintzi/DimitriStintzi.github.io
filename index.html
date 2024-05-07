@@ -17,20 +17,20 @@
     .container{
         background-color: black;
         display: grid;
-        grid-template-columns: auto auto auto auto auto; /* Trois colonnes */
-        gap: 0px; /* Espacement entre les éléments */
+        grid-template-columns: auto auto auto; 
+        gap: 0px; 
     }
 
     .croix{
         grid-column: 1; /* Première colonne */
-        justify-self: center; /* Centrer horizontalement */
+        justify-self: center; 
         align-self: center;
-        border: 2px solid #000; /* Ajout d'une bordure noire de 2px */
+        border: 2px solid white; 
     }
 
     .rectangle {
         width: 100px;
-        height: 25px;
+        height: auto;
         background-color: white;
         position:relative;
         transform: translate(-50%, -50%);
@@ -44,11 +44,30 @@
         transform: translate(-50%, -50%) rotate(180deg);
     }
 
+    .Select {
+      grid-column: 2; /* Deuxième colonne */
+      display: grid;
+      grid-template-rows: auto auto auto auto auto; 
+      align-items: center;
+      justify-content: space-between;
+    }
+
+
+
+    .S {
+      width: 50px;
+      height: 20px;
+      background-color: #d3d3d3;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 12px;
+    }
+
     .buttons {
-        grid-column: 5; /* Troisième colonne */
-        justify-self: center; /* Centrer horizontalement */
-
-
+        grid-column: 3; /* Troisième colonne */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .button {
@@ -59,25 +78,6 @@
         margin-bottom: 10px; /* Ajout d'un espace entre les boutons */
     }
 
-    .start-select {
-      grid-column: 2; /* Deuxième colonne */
-      grid-template-rows: auto auto auto auto auto; 
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .S {
-      width: 50px;
-      height: 20px;
-      background-color: #d3d3d3;
-      border-radius: 5px;
-      font-weight: bold;
-      font-size: 12px;
-    }
-    
-
   </style>
 </head>
 <body>
@@ -87,24 +87,17 @@
                 <div class="rectangle vertical"></div>
                 <div class="rectangle horizontal"></div>
             </div>
+
+            <div class="Select">
+                <button class="S">Start</button>
+                <button class="S">Select</button>
+            </div>
+
+            <div class="buttons">
+                <button class="button">A</button>
+                <button class="button">B</button>
+            </div>
         </div>
-    </div>
-
-    <div class="Select">
-        <div class="gray-box"></div>
-        <div class="gray-box"></div> 
-        <div class="gray-box"></div> 
-        <button class="S">Start</button>
-        <button class="S">Select</button>
-        <div class="gray-box"></div>
-    </div>
-
-    <div class="buttons">
-        <button class="button">A</button>
-        <button class="button">B</button>
     </div>
 </body>
 </html>
-
-
-
