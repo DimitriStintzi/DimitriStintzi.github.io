@@ -10,7 +10,9 @@ body{
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background: #23242a;
+    background: url(arca.jpg);
+    
+    background-size: contain;
 }
 
 .box{
