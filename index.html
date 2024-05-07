@@ -5,27 +5,77 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NES Controller</title>
   <style>
-    .container-fluid{
-        background-color: red;
+    body{
+        background-color: brown;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
     }
 
     .container{
         background-color: black;
         display: grid;
-        grid-template-columns: auto auto auto auto auto; /* Trois colonnes */
-        gap: 0px; /* Espacement entre les éléments */
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        padding: 20px;
+        width: 300px;
+        height: 120px;
     }
 
+    .cross, .buttons {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        gap: 10px;
+    }
+
+    .cross > div, .buttons > div {
+        background: #fff;
+        border-radius: 50%;
+    }
+
+    .cross > div:nth-child(2), .cross > div:nth-child(4), .cross > div:nth-child(6), .cross > div:nth-child(8) {
+        background: none;
+    }
+
+    .buttons > div {
+        grid-column: 2;
+        grid-row: 2;
+    }
+
+    .start-select {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        grid-column: 2;
+    }
+
+    .start-select > button {
+        background: #d3d3d3;
+        border: none;
+        padding: 10px 20px;
+        border-radius: 10px;
+        font-weight: bold;
+        cursor: pointer;
+    }
   </style>
 </head>
 <body>
-    <div class="container-fluid">
-        <div class="container">
-            bbbbbbbbbbbbbbb
+    <div class="container">
+        <div class="cross">
+            <div></div><div></div><div></div>
+            <div></div><div></div><div></div>
+            <div></div><div></div><div></div>
+        </div>
+        <div class="start-select">
+            <button>Start</button>
+            <button>Select</button>
+        </div>
+        <div class="buttons">
+            <div></div>
         </div>
     </div>
 </body>
 </html>
-
-
-
