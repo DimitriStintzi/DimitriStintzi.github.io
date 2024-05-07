@@ -7,75 +7,104 @@
   <style>
     body{
         background-color: brown;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        height: 100vh;
-        margin: 0;
+    }
+
+    .container-fluid{
+        background-color: aliceblue;
+        padding: 1%;
     }
 
     .container{
         background-color: black;
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
-        padding: 20px;
-        width: 300px;
-        height: 120px;
+        grid-template-columns: auto auto auto auto auto; /* Trois colonnes */
+        gap: 0px; /* Espacement entre les éléments */
     }
 
-    .cross, .buttons {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        gap: 10px;
+    .croix{
+        grid-column: 1; /* Première colonne */
+        justify-self: center; /* Centrer horizontalement */
+        align-self: center;
+        border: 2px solid #000; /* Ajout d'une bordure noire de 2px */
     }
 
-    .cross > div, .buttons > div {
-        background: #fff;
+    .rectangle {
+        width: 100px;
+        height: 25px;
+        background-color: white;
+        position:relative;
+        transform: translate(-50%, -50%);
+    }
+
+    .vertical {
+        transform: translate(-50%, -50%) rotate(90deg);
+    }
+
+    .horizontal {
+        transform: translate(-50%, -50%) rotate(180deg);
+    }
+
+    .buttons {
+        grid-column: 5; /* Troisième colonne */
+        justify-self: center; /* Centrer horizontalement */
+
+
+    }
+
+    .button {
+        width: 30px;
+        height: 30px;
         border-radius: 50%;
-    }
-
-    .cross > div:nth-child(2), .cross > div:nth-child(4), .cross > div:nth-child(6), .cross > div:nth-child(8) {
-        background: none;
-    }
-
-    .buttons > div {
-        grid-column: 2;
-        grid-row: 2;
+        background-color: red;
+        margin-bottom: 10px; /* Ajout d'un espace entre les boutons */
     }
 
     .start-select {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        grid-column: 2;
+      grid-column: 2; /* Deuxième colonne */
+      grid-template-rows: auto auto auto auto auto; 
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
     }
 
-    .start-select > button {
-        background: #d3d3d3;
-        border: none;
-        padding: 10px 20px;
-        border-radius: 10px;
-        font-weight: bold;
-        cursor: pointer;
+    .S {
+      width: 50px;
+      height: 20px;
+      background-color: #d3d3d3;
+      border-radius: 5px;
+      font-weight: bold;
+      font-size: 12px;
     }
+    
+
   </style>
 </head>
 <body>
-    <div class="container">
-        <div class="cross">
-            <div></div><div></div><div></div>
-            <div></div><div></div><div></div>
-            <div></div><div></div><div></div>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="croix">
+                <div class="rectangle vertical"></div>
+                <div class="rectangle horizontal"></div>
+            </div>
         </div>
-        <div class="start-select">
-            <button>Start</button>
-            <button>Select</button>
-        </div>
-        <div class="buttons">
-            <div></div>
-        </div>
+    </div>
+
+    <div class="Select">
+        <div class="gray-box"></div>
+        <div class="gray-box"></div> 
+        <div class="gray-box"></div> 
+        <button class="S">Start</button>
+        <button class="S">Select</button>
+        <div class="gray-box"></div>
+    </div>
+
+    <div class="buttons">
+        <button class="button">A</button>
+        <button class="button">B</button>
     </div>
 </body>
 </html>
+
+
+
