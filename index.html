@@ -12,23 +12,21 @@
 
     .container-fluid{
         background-color: aliceblue;
-        height: 100vh;
         padding: 1%;
     }
 
     .container{
         background-color: black;
         display: grid;
-        height: 100vh;
-        grid-template-columns: auto auto auto auto auto; 
-        gap: 0px; 
+        grid-template-columns: auto auto auto;
+        gap: 0px;
     }
 
     .croix{
-        grid-column: 1; /* Première colonne */
-        justify-self: center; 
+        grid-column: 1;
+        justify-self: center;
         align-self: center;
-        border: 2px solid white; 
+        border: 2px solid white;
     }
 
     .rectangle {
@@ -48,14 +46,12 @@
     }
 
     .Select {
-      grid-column: 3; /* Deuxième colonne */
+      grid-column: 2;
       display: grid;
-      grid-template-rows: auto auto auto auto auto; 
+      grid-template-rows: auto auto auto auto auto;
       align-items: center;
       justify-content: space-between;
     }
-
-
 
     .S {
       width: 50px;
@@ -67,7 +63,7 @@
     }
 
     .buttons {
-        grid-column: 5; /* Troisième colonne */
+        grid-column: 3;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -78,7 +74,38 @@
         height: 30px;
         border-radius: 50%;
         background-color: red;
-        margin-bottom: 10px; /* Ajout d'un espace entre les boutons */
+        margin-bottom: 10px;
+    }
+
+    .link-button {
+        width: 100px;
+        height: 40px;
+        border-radius: 5px;
+        background-color: #4CAF50;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin-top: 20px;
+    }
+
+    @media only screen and (max-width: 600px) {
+      /* Adjustments for smaller screens */
+      .container {
+        grid-template-columns: auto;
+      }
+    }
+
+    @media only screen and (max-width: 400px) {
+      /* Further adjustments for very small screens */
+      .container {
+        grid-template-columns: auto;
+      }
+      .Select, .buttons {
+        grid-column: 1;
+        margin-top: 20px;
+      }
     }
 
   </style>
@@ -102,5 +129,8 @@
             </div>
         </div>
     </div>
+
+    <!-- Bouton pour accéder à une autre page HTML -->
+    <a href="manette.html" class="link-button">Autre Page</a>
 </body>
 </html>
