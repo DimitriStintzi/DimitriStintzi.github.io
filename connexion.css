@@ -172,7 +172,7 @@ body{
     height: 44px;
 }
 
-.box form .links{
+/* .box form .links{
     display: flex;
     justify-content: space-between;
 }
@@ -188,7 +188,7 @@ body{
 .box form .links a:nth-child(2)
 {
     color: #fff;
-}
+} */
 
 .box form .inputBox input[type="submit"]{
     border: none;
