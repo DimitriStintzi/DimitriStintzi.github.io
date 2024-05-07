@@ -5,102 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>NES Controller</title>
   <style>
-    body {
-      background-color: #000;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0; /* Ajout de la marge zéro pour éviter les marges par défaut */
+    .container-fluid{
+        background-color: antiquewhite;
     }
 
-    .container {
-      display: grid;
-      grid-template-columns: auto auto auto; /* Trois colonnes */
-      gap: 0px; /* Espacement entre les éléments */
-      width: 100%; /* Prend toute la largeur de l'écran */
-      max-width: 600px; /* Limite la largeur maximale */
-      background-color: #ccc;
-      border: 5px solid #000;
-      padding: 10px;
-      border-radius: 15px;
-      box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    .container{
+        background-color: black;
+        display: grid;
+        grid-template-columns: auto auto auto auto auto; /* Trois colonnes */
+        gap: 0px; /* Espacement entre les éléments */
     }
-
-    img {
-      width: 80px;
-      padding: 0;
-      margin: 0;
-      align-self: center;
-    }
-
-    .arrows {
-      grid-column: 1; /* Première colonne */
-      justify-self: center; /* Centrer horizontalement */
-      align-self: center;
-      border: 2px solid #000; /* Ajout d'une bordure noire de 2px */
-    }
-
-    .start-select {
-      grid-column: 2; /* Deuxième colonne */
-      grid-template-rows: auto auto auto auto auto; 
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .S {
-      width: 50px;
-      height: 20px;
-      background-color: #d3d3d3;
-      border-radius: 5px;
-      font-weight: bold;
-      font-size: 12px;
-    }
-
-    .gray-box {
-      background-color: gray;
-      height: 10px; /* Assurez-vous que la hauteur correspond à celle des boutons */
-      width: 100%; /* La case grise s'étend sur toute la largeur de la colonne */
-      row-gap: 10px;
-      border-radius: 20%;
-    }
-
-    .buttons {
-    grid-column: 3; /* Troisième colonne */
-    justify-self: center; /* Centrer horizontalement */
-    align-self:last baseline;
-
-}
-
-.button {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    background-color: red;
-    margin-bottom: 10px; /* Ajout d'un espace entre les boutons */
-}
 
   </style>
 </head>
 <body>
-  <div class="container">
-    <div class="arrows">
-      <img src="D-pad2.png">
+    <div class="container-fluid">
+        <div class="container">
+            bbbbbbbbbbbbbbb
+        </div>
     </div>
-    <div class="start-select">
-      <div class="gray-box"></div>
-      <div class="gray-box"></div> 
-      <div class="gray-box"></div> 
-      <button class="S">Start</button>
-      <button class="S">Select</button>
-      <div class="gray-box"></div>
-    </div>
-    <div class="buttons">
-      <button class="button">A</button>
-      <button class="button">B</button>
-    </div>
-  </div>
 </body>
 </html>
+
+
+
