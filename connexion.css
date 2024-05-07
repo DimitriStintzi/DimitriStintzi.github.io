@@ -117,6 +117,7 @@ body{
     position: relative;
     width: 300px;
     margin-top: 35px;
+    margin-bottom: 40%;
 }
 
 .box form .inputBox input{
@@ -171,24 +172,6 @@ body{
 {
     height: 44px;
 }
-
-/* .box form .links{
-    display: flex;
-    justify-content: space-between;
-}
-
-.box form .links a{
-    margin: 10px 0;
-    font-size: 0.75em;
-    color: #8f8f8f;
-    text-decoration: none;
-}
-
-.box form .links a:hover,
-.box form .links a:nth-child(2)
-{
-    color: #fff;
-} */
 
 .box form .inputBox input[type="submit"]{
     border: none;
