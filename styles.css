@@ -44,6 +44,9 @@ body{
     border-color: transparent transparent red transparent;
     top: 13vh;
     left: 35vh;
+    background-color: rgba(26, 26, 26, 0.884);
+    border-radius: 40%;
+    
 }
 
 #right {
@@ -51,6 +54,8 @@ body{
     border-color: transparent transparent transparent red;
     top: 35vh;
     left: 57vh;
+    background-color: rgba(26, 26, 26, 0.884);
+    border-radius: 40%;
 }
 
 #down {
@@ -58,6 +63,8 @@ body{
     border-color: red transparent transparent transparent;
     bottom: 18vh;
     left: 35vh;
+    background-color: rgba(26, 26, 26, 0.884);
+    border-radius: 40%;
 }
 
 #left {
@@ -65,4 +72,6 @@ body{
     border-color: transparent red transparent transparent;
     top: 35vh;
     left: 13vh;
+    background-color: rgba(26, 26, 26, 0.884);
+    border-radius: 40%;
 }
