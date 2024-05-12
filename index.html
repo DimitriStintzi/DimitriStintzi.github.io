@@ -1,136 +1,27 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>NES Controller</title>
-  <style>
-    body{
-        background-color: brown;
-        margin: 1%;
-    }
-
-    .container-fluid{
-        background-color: aliceblue;
-        padding: 1%;
-    }
-
-    .container{
-        background-color: black;
-        display: grid;
-        grid-template-columns: auto auto auto;
-        gap: 0px;
-    }
-
-    .croix{
-        grid-column: 1;
-        justify-self: center;
-        align-self: center;
-        border: 2px solid white;
-    }
-
-    .rectangle {
-        width: 100px;
-        height: auto;
-        background-color: white;
-        position:relative;
-        transform: translate(-50%, -50%);
-    }
-
-    .vertical {
-        transform: translate(-50%, -50%) rotate(90deg);
-    }
-
-    .horizontal {
-        transform: translate(-50%, -50%) rotate(180deg);
-    }
-
-    .Select {
-      grid-column: 2;
-      display: grid;
-      grid-template-rows: auto auto auto auto auto;
-      align-items: center;
-      justify-content: space-between;
-    }
-
-    .S {
-      width: 50px;
-      height: 20px;
-      background-color: #d3d3d3;
-      border-radius: 5px;
-      font-weight: bold;
-      font-size: 12px;
-    }
-
-    .buttons {
-        grid-column: 3;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .button {
-        width: 30px;
-        height: 30px;
-        border-radius: 50%;
-        background-color: red;
-        margin-bottom: 10px;
-    }
-
-    .link-button {
-        width: 100px;
-        height: 40px;
-        border-radius: 5px;
-        background-color: #4CAF50;
-        color: white;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-        margin-top: 20px;
-    }
-
-    @media only screen and (max-width: 600px) {
-      /* Adjustments for smaller screens */
-      .container {
-        grid-template-columns: auto;
-      }
-    }
-
-    @media only screen and (max-width: 400px) {
-      /* Further adjustments for very small screens */
-      .container {
-        grid-template-columns: auto;
-      }
-      .Select, .buttons {
-        grid-column: 1;
-        margin-top: 20px;
-      }
-    }
-
-  </style>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-beta1/css/bootstrap.min.css">
+<link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <div class="container-fluid">
-        <div class="container">
-            <div class="croix">
-                <div class="rectangle vertical"></div>
-                <div class="rectangle horizontal"></div>
-            </div>
-
-            <div class="Select">
-                <button class="S">Start</button>
-                <button class="S">Select</button>
-            </div>
-
-            <div class="buttons">
-                <button class="button">A</button>
-                <button class="button">B</button>
+<body class="landscape-mode"> <!-- Ajoutez la classe landscape-mode -->
+<div class="container py-5">
+    <div class="row">
+        <div class="col-4 offset-4">
+            <div id="d-pad">
+                <div id="up" class="button"></div>
+                <div id="right" class="button"></div>
+                <div id="down" class="button"></div>
+                <div id="left" class="button"></div>
+                <div id="buttons">
+                    <button id="A" class="buttons">A</button>
+                    <button id="B" class="buttons">B</button>
+                </div>
+                
             </div>
         </div>
     </div>
-
-    <!-- Bouton pour accéder à une autre page HTML -->
-    <a href="connexion.html" class="link-button">Autre Page</a>
+</div>
+<script src="index.js"></script>
 </body>
 </html>
