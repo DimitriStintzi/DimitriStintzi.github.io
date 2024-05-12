@@ -1,17 +1,13 @@
 
-
-
 #d-pad {
     position: relative;
     width: 50vh;
     height: 50vh;
-    margin: auto;
+    margin: 0;
 }
 
 .button {
     position: absolute;
-    width: 0;
-    height: 0;
     border-style: solid;
     transition: border-color 0.3s ease; /* Ajoutez une transition pour la couleur de fond */
     cursor: pointer; /* Changez le curseur pour indiquer que c'est un bouton cliquable */
@@ -20,8 +16,8 @@
 
 #buttons {
     position: absolute;
-    right: -30vh;
-    top: 15vh;
+    right: -140vh;
+    top: 10vh;
 }
 
 .buttons {
