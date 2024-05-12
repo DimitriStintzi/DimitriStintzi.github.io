@@ -1,10 +1,4 @@
-.landscape-mode {
-    transform: rotate(90deg); /* Tourner tous les éléments de la page de 90 degrés */
-    transform-origin: center top; /* Définir l'origine de la transformation au coin supérieur gauche */
-    width: 100vh; /* Utiliser la hauteur de la fenêtre comme largeur */
-    height: 100vw; /* Utiliser la largeur de la fenêtre comme hauteur */
-    overflow: hidden; /* Masquer tout contenu qui dépasse de la fenêtre */
-}
+
 
 
 #d-pad {
