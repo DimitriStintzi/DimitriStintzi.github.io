@@ -40,3 +40,19 @@ leftTriangle.addEventListener("click", () => {
         leftTriangle.style.borderRightColor = "red";
     }, 300);
 });
+
+
+document.getElementById("plein_ecran_btn").addEventListener("click", function() {
+    toggleFullScreen();
+  });
+  
+  function toggleFullScreen() {
+    if (!document.fullscreenElement) {
+      document.documentElement.requestFullscreen();
+    } else {
+      if (document.exitFullscreen) {
+        document.exitFullscreen();
+      }
+    }
+  }
+  
