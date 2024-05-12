@@ -6,7 +6,7 @@ const leftTriangle = document.getElementById("left");
 
 // Ajoutez des gestionnaires d'événements de clic à chaque triangle
 upTriangle.addEventListener("click", () => {
-    upTriangle.style.borderBottomColor = "blue"; // Changez seulement la couleur de la bordure inférieure
+    upTriangle.style.borderBottomColor = "black"; // Changez seulement la couleur de la bordure inférieure
 
     // Remettre la couleur rouge après 2 secondes
     setTimeout(() => {
@@ -15,7 +15,7 @@ upTriangle.addEventListener("click", () => {
 });
 
 rightTriangle.addEventListener("click", () => {
-    rightTriangle.style.borderLeftColor = "blue"; // Changez seulement la couleur de la bordure gauche
+    rightTriangle.style.borderLeftColor = "black"; // Changez seulement la couleur de la bordure gauche
 
     // Remettre la couleur rouge après 2 secondes
     setTimeout(() => {
@@ -24,7 +24,7 @@ rightTriangle.addEventListener("click", () => {
 });
 
 downTriangle.addEventListener("click", () => {
-    downTriangle.style.borderTopColor = "blue"; // Changez seulement la couleur de la bordure supérieure
+    downTriangle.style.borderTopColor = "black"; // Changez seulement la couleur de la bordure supérieure
 
     // Remettre la couleur rouge après 2 secondes
     setTimeout(() => {
@@ -33,7 +33,7 @@ downTriangle.addEventListener("click", () => {
 });
 
 leftTriangle.addEventListener("click", () => {
-    leftTriangle.style.borderRightColor = "blue"; // Changez seulement la couleur de la bordure droite
+    leftTriangle.style.borderRightColor = "black"; // Changez seulement la couleur de la bordure droite
 
     // Remettre la couleur rouge après 2 secondes
     setTimeout(() => {
