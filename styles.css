@@ -22,7 +22,7 @@ body{
 #buttons {
     position: absolute;
     right: 15vh;
-    top: 25vh;
+    top: 55vh;
 }
 
 .buttons {
@@ -30,8 +30,7 @@ body{
     height: 15vh;
     border-radius: 50%;
     background-color: red;
-    margin-bottom: 10vh;
-    display: flex;
+    margin: 5vh;
     align-items: center;
     justify-content: center;
     color: white;
