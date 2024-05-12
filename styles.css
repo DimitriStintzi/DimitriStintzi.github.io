@@ -1,9 +1,14 @@
-#d-pad {
+body{
+    background-color: whitesmoke;
+}
 
+
+#d-pad {
     position: relative;
-    width: 50vh;
-    height: 50vh;
+    width: 199vh;
+    height: 95vh;
     margin: 0;
+    background-color: #1B2631;
 }
 
 .button {
@@ -16,8 +21,8 @@
 
 #buttons {
     position: absolute;
-    right: -140vh;
-    top: 10vh;
+    right: 15vh;
+    top: 25vh;
 }
 
 .buttons {
@@ -38,27 +43,27 @@
 #up {
     border-width: 0 10vh 20vh 10vh;
     border-color: transparent transparent red transparent;
-    top: 0;
-    left: 20vh;
+    top: 15vh;
+    left: 35vh;
 }
 
 #right {
     border-width: 10vh 0 10vh 20vh;
     border-color: transparent transparent transparent red;
-    top: 20vh;
-    right: -10vh;
+    top: 35vh;
+    left: 55vh;
 }
 
 #down {
     border-width: 20vh 10vh 0 10vh;
     border-color: red transparent transparent transparent;
-    top: 40vh;
-    left: 20vh;
+    bottom: 20vh;
+    left: 35vh;
 }
 
 #left {
     border-width: 10vh 20vh 10vh 0;
     border-color: transparent red transparent transparent;
-    top: 20vh;
-    left: 0;
+    top: 35vh;
+    left: 15vh;
 }
