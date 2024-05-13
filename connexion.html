@@ -9,17 +9,17 @@
 <body>
     <div class="box">
         <span class="borderLine"></span>
-        <form>
+        <form id="login-form" action="/login" method="POST">
             <h2>Sign in</h2>
-
+        
             <div class="inputBox">
-                <input type="text" required="required">
+                <input type="text" id="username" name="username" required="required">
                 <span>Username</span>
                 <i></i>
             </div>           
             <input type="submit" value="Login">
-
         </form>
+        
     </div>
 
     <script src="connexion.js"></script>
