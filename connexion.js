@@ -1,13 +1,41 @@
-document.getElementById('login-form').addEventListener('submit', function(event) {
-    event.preventDefault();
+const express = require('express');
+const bodyParser = require('body-parser');
+const mongoose = require('mongoose');
 
-    var username = document.getElementById('username').value;
+const app = express();
+const PORT = process.env.PORT || 3000;
 
-    // Here, you can implement the login logic, like sending a request to a server
-    // For this example, let's just validate the username and password
-    if (username === 'user') {
-        alert('Login successful!');
-    } else {
-        document.getElementById('error-message').innerText = 'Invalid username';
-    }
+// Connexion à MongoDB
+mongoose.connect('mongodb://localhost:27017/myapp', { useNewUrlParser: true, useUnifiedTopology: true });
+const db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function() {
+  console.log('Connected to MongoDB');
+});
+
+// Définition du schéma MongoDB
+const userSchema = new mongoose.Schema({
+  username: String
+});
+const User = mongoose.model('User', userSchema);
+
+// Analyser les requêtes de type application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({ extended: true }));
+
+// Gérer la requête POST pour enregistrer le nom d'utilisateur
+app.post('/login', (req, res) => {
+  const { username } = req.body;
+  const newUser = new User({ username });
+  newUser.save()
+    .then(() => {
+      res.send('User saved successfully!');
+    })
+    .catch(err => {
+      console.error(err);
+      res.status(500).send('Error saving user');
+    });
+});
+
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
