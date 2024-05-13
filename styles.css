@@ -1,7 +1,16 @@
 body{
     background-color: whitesmoke;
 }
-
+#plein_ecran_btn{
+    position: absolute;
+}
+img{
+    position: absolute;
+    width: 35vw;
+    height: 20vw;
+    right: 20vh;
+    top: 5vh;
+}
 
 #d-pad {
     position: relative;
